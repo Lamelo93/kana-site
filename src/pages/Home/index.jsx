@@ -4,6 +4,7 @@ import Banner from '../../components/Banner'
 import styled from 'styled-components'
 import Card from '../../components/Card'
 import { logementsList } from '../../datas/logements'
+import { Link } from 'react-router-dom'
 
 const HomeWrapper = styled.main`
   position: relative;
@@ -37,9 +38,7 @@ const HomeTitle = styled.h1`
   }
 `
 
-const ListItem = styled.li`
-  list-style-type: none;
-`
+const ListItem = styled(Link)``
 
 const HomeSection = styled.section`
   display: flex;
@@ -66,8 +65,12 @@ const Home = () => {
       </Banner>
       <HomeSection>
         {logementsList.map((logement) => (
-          <ListItem key={logement.id}>
-            <Card image={logement.cover} title={logement.title} />
+          <ListItem to={`/fiche/${logement.id}`} key={logement.id}>
+            <Card
+              id={logement.id}
+              image={logement.cover}
+              title={logement.title}
+            />
           </ListItem>
         ))}
       </HomeSection>

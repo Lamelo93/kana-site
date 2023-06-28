@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/logo/logo.png'
 
 const HeaderWrapper = styled.header`
@@ -45,7 +45,7 @@ const StyledLink = styled(Link)`
   font-size: 17px;
   font-weight: 500;
   color: #ff6060;
-
+  text-decoration: ${(props) => (props.isActive ? 'underline' : 'none')};
   text-align: right;
 
   @media screen and (min-width: 768px) {
@@ -54,14 +54,22 @@ const StyledLink = styled(Link)`
 `
 
 const Header = () => {
+  const location = useLocation()
+  const isActive = (pathname) => {
+    return location.pathname === pathname ? true : false
+  }
   return (
     <HeaderWrapper>
       <Logo>
         <LogoImg src={logo} alt="Kana-logo" />
       </Logo>
       <Nav>
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/about">A propos</StyledLink>
+        <StyledLink to="/" isActive={isActive('/')}>
+          Accueil
+        </StyledLink>
+        <StyledLink to="/about" isActive={isActive('/about')}>
+          A propos
+        </StyledLink>
       </Nav>
     </HeaderWrapper>
   )

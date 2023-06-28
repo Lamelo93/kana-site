@@ -26,7 +26,7 @@ const index = () => {
         <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/fiche" exact element={<Fiche />} />
+          <Route path="/fiche/:id" exact element={<Fiche />} />
           <Route path="/about" exact element={<About />} />
           <Route path="*" exact element={<Error />} />
         </Routes>
