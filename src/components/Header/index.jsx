@@ -45,7 +45,7 @@ const StyledLink = styled(Link)`
   font-size: 17px;
   font-weight: 500;
   color: #ff6060;
-  text-decoration: ${(props) => (props.isActive ? 'underline' : 'none')};
+  text-decoration: ${(props) => (props.isactive ? 'underline' : 'none')};
   text-align: right;
 
   @media screen and (min-width: 768px) {
@@ -64,10 +64,13 @@ const Header = () => {
         <LogoImg src={logo} alt="Kana-logo" />
       </Logo>
       <Nav>
-        <StyledLink to="/" isActive={isActive('/')}>
+        <StyledLink to="/" isactive={isActive('/') ? 'true' : undefined}>
           Accueil
         </StyledLink>
-        <StyledLink to="/about" isActive={isActive('/about')}>
+        <StyledLink
+          to="/about"
+          isactive={isActive('/about') ? 'true' : undefined}
+        >
           A propos
         </StyledLink>
       </Nav>

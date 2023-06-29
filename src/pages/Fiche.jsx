@@ -143,6 +143,7 @@ const Dropdowns = styled.div`
     flex-wrap: nowrap;
     border-radius: 25px;
     flex-direction: row;
+    padding-bottom: 50px;
   }
 `
 
@@ -155,8 +156,8 @@ const Fiche = () => {
   const navigate = useNavigate()
   const activeLogement = logementsList.find((logement) => logement.id === id)
   const exists = logementsList.some((logement) => logement.id === id)
+  const rating = activeLogement ? parseInt(activeLogement.rating) : 0
 
-  const rating = parseInt(activeLogement.rating)
   useEffect(() => {
     if (!exists) {
       navigate('/notfound')
