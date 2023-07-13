@@ -1,3 +1,4 @@
+//COMPOSANT WRAPPER (TOUTES LES PAGES)
 import styled from 'styled-components'
 
 const PageWrapper = styled.div`

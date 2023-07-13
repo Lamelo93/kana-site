@@ -1,3 +1,5 @@
+//COMPOSANT FOOTER (TOUTES LES PAGES)
+
 import React from 'react'
 import styled from 'styled-components'
 import logofooter from '../../assets/logo/logo-footer.png'
@@ -42,7 +44,7 @@ const Text = styled.p`
 const Footer = () => {
   return (
     <FooterContainer>
-      <LogoFooter src={logofooter} alt="Kana-logo" />
+      <LogoFooter src={logofooter} alt="Kasa-logo" />
       <Text>© 2020 Kasa. All rights reserved</Text>
     </FooterContainer>
   )

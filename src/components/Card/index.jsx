@@ -1,3 +1,5 @@
+//COMPOSANT CARTE (PAGE D'ACCUEIL)
+
 import React from 'react'
 import styled from 'styled-components'
 

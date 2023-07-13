@@ -1,3 +1,5 @@
+//DONNÉES DES LOGEMENTS
+
 export const logementsList = [
   {
     id: 'c67ab8a7',

@@ -1,3 +1,5 @@
+//COMPOSANT RATING (PAGE LOGEMENT/FICHE)
+
 import React from 'react'
 import styled from 'styled-components'
 import starInactive from '../../assets/Icones/star-inactive.png'
@@ -33,7 +35,7 @@ const StarsRating = ({ rating }) => {
       {Array.from({ length: rating }, (_, index) => (
         <Starsimg key={index} src={starActive} alt="star-active" />
       ))}
-      {/*_ est utilisé car on a besoin que de l'index pour montrer qu'aucune autre valeur n'est utilisée*/}
+      {/*'_'est utilisé car on a besoin que de l'index, et montre qu'aucune autre valeur n'est utilisée*/}
       {Array.from({ length: 5 - rating }, (_, index) => (
         <Starsimg key={index} src={starInactive} alt="star-inactive" />
       ))}

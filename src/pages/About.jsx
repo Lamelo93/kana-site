@@ -1,3 +1,5 @@
+//PAGE A PROPOS
+
 import React from 'react'
 import BannerImage from '../assets/images/img-about.png'
 import Banner from '../components/Banner'
@@ -33,6 +35,7 @@ const AboutSection = styled.section`
 `
 
 const About = () => {
+  //J'utilise la méthode map pour générer les menus dropdowns dynamiquement
   return (
     <AboutWrapper>
       <Banner image={BannerImage}></Banner>

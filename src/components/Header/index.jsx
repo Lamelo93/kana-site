@@ -1,3 +1,5 @@
+//COMPOSANT HEADER (TOUTES LES PAGES)
+
 import React from 'react'
 import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
@@ -45,7 +47,10 @@ const StyledLink = styled(Link)`
   font-size: 17px;
   font-weight: 500;
   color: #ff6060;
-  text-decoration: ${(props) => (props.isactive ? 'underline' : 'none')};
+  text-decoration: ${(props) =>
+    props.isactive
+      ? 'underline'
+      : 'none'}; /*isactive souligne le lien si sa destination est active*/
   text-align: right;
 
   @media screen and (min-width: 768px) {
@@ -54,14 +59,16 @@ const StyledLink = styled(Link)`
 `
 
 const Header = () => {
-  const location = useLocation()
+  const location = useLocation() //useLocation permet de vérifier l'url actif
   const isActive = (pathname) => {
     return location.pathname === pathname ? true : false
   }
+
+  //La valeur de la CONST isActive permet de donner une valeur 'true' a la PROP isactive
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImg src={logo} alt="Kana-logo" />
+        <LogoImg src={logo} alt="Kasa-logo" />
       </Logo>
       <Nav>
         <StyledLink to="/" isactive={isActive('/') ? 'true' : undefined}>

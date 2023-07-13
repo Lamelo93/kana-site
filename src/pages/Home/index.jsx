@@ -1,3 +1,5 @@
+//PAGE D'ACCUEIL
+
 import React from 'react'
 import BannerImage from '../../assets/images/img-home.png'
 import Banner from '../../components/Banner'
@@ -58,6 +60,7 @@ const HomeSection = styled.section`
 `
 
 const Home = () => {
+  //J'utilise la méthode map pour générer dynamiquement les cartes logement
   return (
     <HomeWrapper>
       <Banner image={BannerImage}>

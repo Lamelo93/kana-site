@@ -1,3 +1,5 @@
+//ROUTES
+
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from '../../pages/Home'
@@ -19,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const index = () => {
+  //exact element est plus précis et évite les matcch entre une route et plusieurs composants
   return (
     <Router>
       <GlobalStyle />

@@ -1,3 +1,5 @@
+//PAGE DE LOGEMENT
+
 import React, { useEffect } from 'react'
 import Carrousel from '../components/Carrousel'
 import Dropdown from '../components/Dropdown'
@@ -152,22 +154,22 @@ const ListItem = styled.li`
 `
 
 const Fiche = () => {
-  const { id } = useParams()
-  const navigate = useNavigate()
+  const { id } = useParams() // useParams me permet de récupérer l'id spécifié dans l'url
+  const navigate = useNavigate() //useNavigate me permet d'effectuer une redirection vers la page d'erreur en cas de mauvais id
   const activeLogement = logementsList.find((logement) => logement.id === id)
-  const exists = logementsList.some((logement) => logement.id === id)
-  const rating = activeLogement ? parseInt(activeLogement.rating) : 0
+  const exists = logementsList.some((logement) => logement.id === id) // Je vérifie si l'id dans l'url existe dans ma base de données
+  const rating = activeLogement ? parseInt(activeLogement.rating) : 0 //Pour récupérer la note, je vérifie que l'id est reconnu
 
   useEffect(() => {
     if (!exists) {
       navigate('/notfound')
     }
-  }, [exists, navigate]) //UseEffect s'active seulement lorsqu'is a reçu ses dependencies
+  }, [exists, navigate]) //useEffect s'active seulement lorsqu'is a reçu ses dependencies
 
   //La valeur de exists n'est pas encore déterminée, c'est pourquoi il faut utiliser useEffect au lieu d'utiliser navigate dans le composant directement
 
   if (!exists) {
-    return null
+    return null // J'utilise return null pour laisser le temps a useEffect de s'activer ou non
   } else {
     return (
       <FicheWrapper>

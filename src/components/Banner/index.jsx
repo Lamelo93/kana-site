@@ -1,3 +1,4 @@
+//COMPOSANT BANNIERE (PAGE D'ACCUEIL ET PAGE A PROPOS)
 import styled from 'styled-components'
 
 const Banner = styled.div`
@@ -12,7 +13,7 @@ const Banner = styled.div`
   text-align: center;
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${(props) => props.image});
+    url(${(props) => props.image}); /*L'image de la bannière est passée en props lorsque le composant est utilisé*/
   background-size: cover;
   background-position: center;
 

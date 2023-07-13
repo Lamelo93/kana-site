@@ -1,3 +1,5 @@
+//COMPOSANT DROPDOWN (PAGE A PROPOS ET PAGE LOGEMENT/FICHE)
+
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import arrow from '../../assets/Icones/arrow-down.png'
@@ -35,7 +37,7 @@ const DropdownButton = styled.img`
   max-width: 16px;
   transition: transform 0.3s ease;
   cursor: pointer;
-
+  /*La flèche pivote lorsque le menu s'ouvre*/
   ${(props) =>
     props.isOpen &&
     css`
@@ -68,11 +70,11 @@ const CollapseWrapper = styled.div`
 `
 
 const Dropdown = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false) //Le menu dropdown est fermé par défaut
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
-  }
+  } //Change la valeur de isOpen entre true et false
 
   return (
     <CollapseWrapper>

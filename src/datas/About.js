@@ -1,3 +1,4 @@
+//Contenu de la page a propos
 export const AboutContent = [
   {
     title: 'Fiabilité',
