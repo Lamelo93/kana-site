@@ -2,82 +2,35 @@
 
 import React from 'react'
 import BannerImage from '../../assets/images/img-home.png'
-import Banner from '../../components/Banner'
-import styled from 'styled-components'
 import Card from '../../components/Card'
+import Banner from '../../components/Banner'
+import '../../utils/scss/Pages/_Homepage.scss'
 import { logementsList } from '../../datas/logements'
 import { Link } from 'react-router-dom'
-
-const HomeWrapper = styled.main`
-  position: relative;
-  width: 100%;
-  max-width: 1240px;
-  margin-top: 10px;
-  padding: 20px;
-  @media screen and (min-width: 768px) {
-    padding: 0;
-    margin: 70px auto 0 auto;
-  }
-`
-
-const HomeTitle = styled.h1`
-  font-size: 24px;
-
-  font-family: Montserrat;
-  max-width: 217px;
-  font-weight: 500;
-  display: flex;
-  align-items: flex-end;
-  color: #ffffff;
-  text-align: start;
-  margin-left: 20px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 100%;
-    font-size: 48px;
-    line-height: 68px;
-    text-align: center;
-  }
-`
-
-const ListItem = styled(Link)``
-
-const HomeSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #f6f6f6;
-    border-radius: 25px;
-    gap: 50px;
-    padding: 50px 50px 50px 50px;
-  }
-`
 
 const Home = () => {
   //J'utilise la méthode map pour générer dynamiquement les cartes logement
   return (
-    <HomeWrapper>
+    <main className="home-wrapper">
       <Banner image={BannerImage}>
-        <HomeTitle>Chez vous, partout et ailleurs</HomeTitle>
+        <h1 className="home-title">Chez vous, partout et ailleurs</h1>
       </Banner>
-      <HomeSection>
+      <section className="home-section">
         {logementsList.map((logement) => (
-          <ListItem to={`/fiche/${logement.id}`} key={logement.id}>
+          <Link
+            to={`/fiche/${logement.id}`}
+            key={logement.id}
+            className="list-item"
+          >
             <Card
               id={logement.id}
               image={logement.cover}
               title={logement.title}
             />
-          </ListItem>
+          </Link>
         ))}
-      </HomeSection>
-    </HomeWrapper>
+      </section>
+    </main>
   )
 }
 

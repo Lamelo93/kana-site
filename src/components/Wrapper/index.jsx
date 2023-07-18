@@ -1,19 +1,10 @@
 //COMPOSANT WRAPPER (TOUTES LES PAGES)
-import styled from 'styled-components'
+import React from 'react'
+import '../../utils/scss/Layout/_PageWrapperStyles.scss'
 
-const PageWrapper = styled.div`
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  box-sizing: border-box;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  padding-bottom: 209px;
-  @media screen and (min-width: 768px) {
-    padding: 0;
-  }
-`
+const PageWrapper = ({ children }) => {
+  //J'utilise {children} pour afficher le contenu que je rajoute dans mon routeur
+  return <div className="page-wrapper">{children}</div>
+}
 
 export default PageWrapper

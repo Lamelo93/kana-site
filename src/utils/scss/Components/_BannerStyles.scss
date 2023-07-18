@@ -1,0 +1,31 @@
+//BANNER STYLE
+
+@import '../Utils/mixins';
+@import '../Utils/variables';
+
+$banner-height: 111px;
+$banner-height-desktop: 223px;
+
+.banner {
+  height: $banner-height;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 25px;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    var(--banner-image); // J'utilise une variable CSS pour l'image
+  background-size: cover;
+  background-position: center;
+
+  @include tablet-only {
+    height: $banner-height-desktop;
+    width: 100%;
+    max-width: 1240px;
+    font-size: 3em;
+    justify-content: center;
+  }
+}

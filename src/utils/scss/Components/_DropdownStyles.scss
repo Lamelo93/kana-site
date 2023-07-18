@@ -1,0 +1,75 @@
+//DROPDOWN STYLES
+
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.collapse-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &.open {
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.dropdown-wrapper {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $clr-primary;
+  border-radius: 5px;
+  height: 30px;
+
+  @include tablet-only {
+    height: 47px;
+  }
+
+  .dropdown-title {
+    font-family: $primary-font-family;
+    color: $text-color;
+    font-size: 13px;
+    font-weight: 400;
+
+    @include tablet-only {
+      font-size: 18px;
+    }
+  }
+
+  .dropdown-button {
+    max-width: 16px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+
+    @include tablet-only {
+      max-width: 32px;
+    }
+  }
+}
+
+.dropdown-content {
+  background-color: $bg-color-a;
+  color: $clr-primary;
+  width: 100%;
+  font-family: $primary-font-family;
+  font-size: 12px;
+  padding: 20px;
+  text-align: left;
+
+  @include tablet-only {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,60 @@
+//HEADER STYLE
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 16px;
+
+  @include tablet-only {
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 47px;
+    width: 145px;
+
+    @include tablet-only {
+      height: 68px;
+      width: 211px;
+    }
+
+    .logo-img {
+      max-width: 100%;
+    }
+  }
+
+  .nav {
+    left: 75.08%;
+    right: 0%;
+    top: 25%;
+    bottom: 25%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+    .styled-link {
+      font-family: $primary-font-family;
+      font-size: 17px;
+      font-weight: 500;
+      color: $clr-primary;
+      text-decoration: none;
+      text-align: right;
+
+      &.active {
+        text-decoration: underline; /*isactive souligne le lien si sa destination est active*/
+      }
+
+      @include tablet-only {
+        font-size: 24px;
+      }
+    }
+  }
+}

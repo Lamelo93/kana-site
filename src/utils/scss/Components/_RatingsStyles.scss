@@ -1,0 +1,28 @@
+//RATINGS STYLES
+
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.ratings {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 196px;
+  height: 36px;
+
+  @include tablet-only {
+    justify-content: flex-end;
+    height: 36px;
+    width: 36px;
+  }
+
+  .stars-img {
+    height: 18px;
+    width: 18px;
+
+    @include tablet-only {
+      height: 36px;
+      width: 36px;
+    }
+  }
+}

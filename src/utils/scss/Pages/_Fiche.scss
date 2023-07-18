@@ -1,0 +1,166 @@
+//FICHE/LOGEMENT STYLES
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.fiche-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 10px;
+  padding: 20px;
+
+  @include tablet-only {
+    padding: 0;
+    margin: 70px auto 0 auto;
+  }
+
+  .bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    width: 100%;
+
+    @include tablet-only {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .styled-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      text-align: left;
+    }
+
+    .logement-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $clr-primary;
+      font-size: 18px;
+      font-family: $primary-font-family;
+      font-weight: 500;
+      word-wrap: break-word;
+      padding-bottom: 10px;
+
+      @include tablet-only {
+        font-size: 36px;
+      }
+    }
+
+    .logement-location {
+      text-align: left;
+      color: $clr-primary;
+      font-size: 14px;
+      font-family: $primary-font-family;
+      font-weight: 500;
+      word-wrap: break-word;
+      padding-bottom: 10px;
+
+      @include tablet-only {
+        font-size: 18px;
+      }
+    }
+
+    .host-and-rating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      padding-top: 10px;
+
+      @include tablet-only {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .host {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .host-name {
+        display: flex;
+        flex-direction: column;
+        color: $clr-primary;
+        font-size: 12px;
+        font-family: $primary-font-family;
+        font-weight: 500;
+        word-wrap: break-word;
+        max-width: 93px;
+        text-align: right;
+
+        @include tablet-only {
+          font-size: 18px;
+        }
+      }
+
+      .host-picture {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+
+        @include tablet-only {
+          height: 64px;
+          width: 64px;
+        }
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .list-item {
+      list-style-type: none;
+    }
+
+    .tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $clr-primary;
+      padding: 0 10px;
+      min-height: 25px;
+      border-radius: 10px;
+      color: $text-color;
+      font-size: 10px;
+      font-family: $primary-font-family;
+      font-weight: 400;
+      word-wrap: break-word;
+
+      @include tablet-only {
+        font-size: 14px;
+        min-width: 115px;
+      }
+    }
+  }
+
+  .dropdowns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+
+    @include tablet-only {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      border-radius: 25px;
+      flex-direction: row;
+      padding-bottom: 50px;
+    }
+
+    .list-item {
+      list-style-type: none;
+    }
+  }
+}

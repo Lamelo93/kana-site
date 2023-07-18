@@ -1,0 +1,52 @@
+//STYLE DE LA PAGE ACCUEIL
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.home-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 10px;
+  padding: 20px;
+
+  @include tablet-only {
+    padding: 0;
+    margin: 70px auto 0 auto;
+  }
+}
+
+.home-title {
+  font-size: 24px;
+  font-family: $primary-font-family;
+  max-width: 217px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  color: $text-color;
+  text-align: start;
+  margin-left: 20px;
+
+  @include tablet-only {
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 68px;
+    text-align: center;
+  }
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+
+  @include tablet-only {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: $bg-color-a;
+    border-radius: 25px;
+    gap: 50px;
+    padding: 50px;
+  }
+}

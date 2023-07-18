@@ -1,0 +1,30 @@
+//ABOUT PAGE STYLES
+@import '../Utils/variables';
+@import '../Utils/mixins';
+
+.about-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 10px;
+  padding: 20px;
+
+  @include tablet-only {
+    padding: 0;
+    margin: 70px auto 0 auto;
+  }
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+
+  @include tablet-only {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 50px;
+  }
+}

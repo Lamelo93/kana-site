@@ -1,0 +1,28 @@
+//MIXINS
+
+@mixin center-content($gap: 0, $direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+/*breakpoints*/
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints,tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints,desktop)) {
+    @content;
+  }
+}
+
+@mixin smallscreen {
+  @media screen and (max-width: map-get($breakpoints,smallscreen)) {
+    @content;
+  }
+}
