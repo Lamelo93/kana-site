@@ -4,6 +4,7 @@
 @import '../Utils/variables';
 
 $banner-height: 111px;
+$banner-height-about: 255px;
 $banner-height-desktop: 223px;
 
 .banner {
@@ -20,7 +21,9 @@ $banner-height-desktop: 223px;
     var(--banner-image); // J'utilise une variable CSS pour l'image
   background-size: cover;
   background-position: center;
-
+  &--about {
+    height: $banner-height-about;
+  }
   @include tablet-only {
     height: $banner-height-desktop;
     width: 100%;
