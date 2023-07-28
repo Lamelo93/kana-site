@@ -5,7 +5,7 @@ import BannerImage from '../../assets/images/img-home.png'
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
 import '../../utils/scss/Pages/_Homepage.scss'
-import { logementsList } from '../../datas/logements'
+import logementsList from '../../datas/logements.json'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

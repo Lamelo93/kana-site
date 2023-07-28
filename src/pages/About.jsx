@@ -5,7 +5,7 @@ import BannerImage from '../assets/images/img-about.png'
 import Banner from '../components/Banner'
 import Dropdown from '../components/Dropdown'
 import '../utils/scss/Pages/_About.scss'
-import { AboutContent } from '../datas/About'
+import AboutContent from '../datas/About.json'
 
 const About = () => {
   //J'utilise la méthode map pour générer les menus dropdowns dynamiquement

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import Carrousel from '../components/Carrousel'
 import Dropdown from '../components/Dropdown'
 import StarsRating from '../components/Ratings'
-import { logementsList } from '../datas/logements'
+import logementsList from '../datas/logements.json'
 import { useNavigate, useParams } from 'react-router-dom'
 import '../utils/scss/Pages/_Fiche.scss'
 
